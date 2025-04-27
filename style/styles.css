@@ -1,0 +1,1100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+.nav-phone {
+    display: none;
+}
+
+.nav-bar {
+    position: fixed;
+    z-index: 99999999;
+    top: 0;
+    left: 0;
+    background-color: hsla(0, 0%, 7%, .5);
+    backdrop-filter: blur(10px);
+
+}
+
+.nav-header {
+    padding: 0;
+    width: 55%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 25px;
+}
+
+.search-bar {
+    background-color: hsla(0, 0%, 100%, .05);
+    backdrop-filter: blur(8px);
+    width: 270px;
+    border-color: hsla(0, 0%, 100%, .1);
+    border: 1px;
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 9px;
+    overflow: hidden;
+    padding: 9px 19px;
+    border: 1px solid rgba(255, 255, 255, 0.185);
+    transition: 0.3s;
+}
+
+.search-bar input {
+    color: white;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+::placeholder {
+    color: #eee;
+}
+
+.search-bar i {
+    color: #cccc;
+    font-size: 17px;
+    cursor: pointer;
+
+}
+
+.search-bar:hover {
+    border: 1px solid rgba(255, 255, 255, 0.432);
+}
+
+.member-log {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    color: white;
+
+}
+
+.member-log .box1 {
+    display: flex;
+    background-color: hsla(0, 0%, 100%, .05);
+    backdrop-filter: blur(8px);
+    border-color: hsla(0, 0%, 100%, .1);
+    border-radius: 9999px;
+    padding: 9px 29px;
+    gap: 19px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.185);
+
+}
+
+.member-log .box1 a {
+    display: block;
+    text-decoration: none;
+    color: white;
+
+}
+
+.member-log .notification {
+    padding: 0;
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+
+}
+
+.member-log .box1:hover {
+    border: 1px solid rgba(255, 255, 255, 0.432);
+}
+
+.language {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    position: relative;
+    cursor: pointer;
+}
+
+.language i {
+    font-size: 22px;
+}
+
+.language h3 {
+    margin: 0;
+    font-size: 19px;
+}
+
+.language .down {
+    position: absolute;
+    font-size: 15px;
+    content: "";
+    top: 2px;
+    right: -15px;
+}
+
+hr {
+    background: linear-gradient(0.25turn, rgba(255, 255, 255, 0.212), white, rgba(128, 128, 128, 0.212));
+    height: 2.2px;
+    padding: 0;
+    margin: 0;
+}
+
+.menu {
+    width: 55%;
+    padding: 0;
+}
+
+.menu-bar {
+    padding: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu-bar ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 45px;
+    font-size: 16px;
+    font-weight: 500;
+    padding-block: 20px;
+}
+
+.menu-bar ul li {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    color: #b6b6b6;
+    text-decoration: none;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.menu-bar ul li .home {
+    color: rgb(255, 38, 0);
+}
+
+.menu-bar ul li a {
+    text-decoration: none;
+    color: #b6b6b6;
+    transition: 0.3s;
+}
+
+.menu-bar ul li:hover {
+    color: white;
+}
+
+.menu-bar ul li a:hover {
+    color: white;
+}
+
+.cinema-locate {
+    justify-content: end;
+    position: relative;
+}
+
+.cinema-locate .locate {
+    color: red;
+}
+
+.cinema-locate .sub-menu {
+    display: none;
+    color: white;
+    flex-direction: column;
+    align-items: start;
+    background-color: rgb(14, 14, 14);
+    border-radius: 9px;
+    box-shadow: 0px 0px 9px #242424;
+    position: absolute;
+    z-index: 999;
+    top: 100%;
+    right: 0;
+    padding: 0;
+    padding-bottom: 9px;
+    margin: 0;
+    gap: 0;
+    cursor: default;
+}
+
+.sub-menu.isLocate {
+    display: flex;
+}
+
+.cinema-locate .sub-menu li {
+    position: relative;
+    width: 550px;
+    padding: 15px 19px;
+    display: flex;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.cinema-locate .sub-menu li::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    background: linear-gradient(0.25turn, rgba(255, 255, 255, 0.041), rgba(255, 255, 255, 0.486), rgba(255, 255, 255, 0.041));
+}
+
+.cinema-locate .sub-menu li a {
+    display: block;
+    font-size: 16px;
+    font-weight: 400;
+    color: rgb(255, 255, 255);
+    transition: 0.3s;
+}
+
+.cinema-locate .sub-menu li:hover {
+    background-color: #242424;
+}
+
+.mySlides {
+    display: none;
+}
+
+
+.slideshow-container,
+.mySlides img {
+    width: 100%;
+    height: 750px;
+    object-fit: cover;
+    filter: blur(15px);
+    -webkit-filter: blur(15px);
+    vertical-align: middle;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.slideshow-container,
+.mySlides img::before {
+    width: 100%;
+    height: 750px;
+    object-fit: cover;
+    filter: blur(15px);
+    -webkit-filter: blur(15px);
+    vertical-align: middle;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.hero-section {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(31, 31, 31, .5), rgba(0, 0, 0, .5) 50.65%, hsla(0, 0%, 8%, .5));
+    top: 0;
+    left: 0;
+    content: '';
+    position: absolute;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: none;
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 5.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .9
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+    .text {
+        font-size: 11px
+    }
+}
+
+.carousel_items {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: hidden;
+}
+
+.slide-container {
+    border-radius: 27px;
+    width: 55%;
+    position: absolute;
+    bottom: 60%;
+    left: 50%;
+    transform: translate(-50%, 65%);
+    overflow: hidden;
+}
+
+.carousel_item {
+    min-width: 100%;
+    height: 490px;
+    transition: all 0.3s linear;
+}
+
+.carousel_item img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.main-contents {
+    padding: 0;
+    margin: 0;
+    width: 55%;
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.main-contents .tap-title {
+    display: flex;
+    gap: 19px;
+}
+
+.tap-title .tap-link {
+    font-size: 42px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+    color: #bebebe;
+}
+
+.tap-link.active-link {
+    color: white;
+}
+
+.tap-contents {
+    display: none;
+}
+
+.tap-contents.active-tap {
+    display: block;
+}
+
+.main-contents .tap-title span {
+    position: relative;
+
+}
+
+.main-contents .tap-title span::after {
+    content: '';
+    position: absolute;
+    height: 80%;
+    width: 2px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.041), rgba(255, 255, 255, 0.486), rgba(255, 255, 255, 0.041));
+    /* change colors as needed */
+}
+
+
+.calender {
+    display: flex;
+    gap: 25px;
+    margin-block: 37px;
+}
+
+.calender .cal-box {
+    padding: 0px 65px;
+    height: 85px;
+    background-color: #000000;
+    color: white;
+    border-radius: 15px;
+    outline: 1px solid rgba(255, 255, 255, 0.308);
+    cursor: pointer;
+    transition: 0.2s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.calender .cal-box.box-1 {
+    padding: 0px 25px;
+}
+
+.calender .cal-box:hover {
+    outline: 1px solid rgb(255, 255, 255);
+}
+
+.calender .cal-box p {
+    font-size: 15px;
+    font-weight: 500;
+    margin: 0;
+    color: #b6b6b6;
+}
+
+.calender .cal-box h3 {
+    font-size: 23px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.movie-box {
+    width: 100%;
+    display: flex;
+    gap: 2%;
+    flex-wrap: wrap;
+}
+
+.movie-box .items {
+    width: 23%;
+    height: 450px;
+    overflow: hidden;
+    margin-block: 15px;
+    cursor: pointer;
+}
+
+.movie-box .items img {
+    width: 100%;
+    height: 85%;
+    display: block;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.movie-box .items .txt {
+    height: 15%;
+    width: 100%;
+    padding-block: 15px;
+}
+
+.movie-box .items .txt .title {
+    margin: 0;
+    color: white;
+}
+
+.movie-box .items .date {
+    color: white;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.movie-box .items .date p {
+    color: #c0c0c0;
+    margin: 0;
+}
+
+.movie-box .items .date img {
+    width: auto;
+    height: 16px;
+    display: block;
+}
+
+.more {
+    width: 100%;
+    padding-block: 55px;
+}
+
+.more .more-title {
+    color: white;
+}
+
+.more .more-box {
+    width: 100%;
+    height: 425px;
+    border-radius: 19px;
+    overflow: hidden;
+    position: relative;
+    margin-block: 35px;
+    margin-bottom: 90px;
+}
+
+.more .more-box img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.more-txt {
+    width: 39%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 35px;
+    background-color: #7c0000;
+}
+
+.more-hero {
+    width: 35%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 38.9%;
+    background: linear-gradient(to right, #7c0202, transparent);
+    /* dark red fading out */
+    pointer-events: none;
+    /* so it doesn't block clicks */
+}
+
+.more-txt h1 {
+    color: white;
+}
+
+.more-txt p {
+    color: #c0c0c0;
+}
+
+.more-txt button {
+    width: 50%;
+    border-radius: 25px;
+    font-weight: 500;
+    border: none;
+    padding: 13px 25px;
+    color: rgb(160, 5, 10);
+    font-size: 16px;
+    background-color: white;
+}
+
+main {
+    margin: auto;
+    height: 280vh;
+    padding-bottom: 60px;
+    background-attachment: fixed;
+    background-size: cover;
+    overflow: hidden;
+    background: radial-gradient(circle, rgb(43, 5, 5) 0%, rgb(0, 0, 0) 100%);
+}
+
+footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    background-color: #141414;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.foots {
+    padding-top: 45px;
+    width: 55%;
+}
+
+.foot-box h3 {
+    font-size: 20px;
+    padding-bottom: 19px;
+}
+
+.foot-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.foot-box ul li a {
+    display: block;
+    text-decoration: none;
+    color: #b6b6b6;
+    margin-top: 9px;
+}
+
+.foot-box ul li a:hover {
+    color: white;
+}
+
+.right ul {
+    display: flex;
+    gap: 15px;
+}
+
+.right ul li {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 1px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 19px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.right ul li:hover {
+    background-color: #494949;
+}
+
+.pay-app {
+    display: flex;
+    gap: 75px;
+    align-items: center;
+    padding-bottom: 59px;
+}
+
+.foots p {
+    margin: 0;
+    padding-block: 45px;
+}
+
+
+@media only screen and (max-width: 1200px) {
+
+    .nav-header,
+    .menu {
+        width: 80%;
+    }
+
+    .slide-container,
+    .main-contents,
+    .foots {
+        width: 80%;
+    }
+
+    .movie-box .items {
+        width: 45%;
+    }
+
+    .more-txt {
+        width: 55%;
+    }
+
+    .more-hero {
+        left: 54%;
+        width: 30%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+
+    .nav-header {
+        display: none;
+    }
+
+    .menu-bar .left-menu {
+        display: none;
+    }
+
+    .nav-phone {
+        width: 90%;
+        margin: auto;
+        padding-block: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 17px;
+        color: white;
+    }
+
+    .nav-phone .left-bar {
+        display: flex;
+        gap: 9px;
+        list-style: none;
+        align-items: center;
+        justify-content: start;
+        padding: 0;
+        margin: 0;
+    }
+
+    .nav-phone .left-bar li {
+        border-radius: 50%;
+        width: 35px;
+        height: 35px;
+        outline: 1px solid #666666;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .nav-phone .left-bar li:hover {
+        outline: 1px solid #bebebe;
+    }
+
+    .nav-phone .center-bar img {
+        height: 35px;
+        display: block;
+    }
+
+    .nav-phone .right-bar {
+        display: flex;
+        gap: 7px;
+        list-style: none;
+        align-items: center;
+        justify-content: end;
+        padding: 0;
+        margin: 0;
+    }
+
+    .nav-phone .right-bar li {
+        cursor: pointer;
+        font-size: 20px;
+        color: #b6b6b6;
+    }
+
+    .cinema-locate {
+        width: 100%;
+        justify-content: end;
+    }
+
+    .cinema-locate .sub-menu li {
+        width: 395px;
+    }
+
+    .slide-container,
+    .main-contents,
+    .foots {
+        width: 90%;
+    }
+
+    .slideshow-container {
+        display: none;
+    }
+
+    .slide-container {
+        border-radius: 0;
+        width: 100%;
+        position: absolute;
+        bottom: 76%;
+        left: 50;
+        overflow: hidden;
+    }
+
+    .carousel_item {
+        min-width: 100%;
+        height: 290px;
+    }
+
+    .main-contents {
+        padding: 0;
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+
+    .main-contents .tap-title {
+        display: flex;
+        justify-content: center;
+    }
+
+    .tap-title .tap-link {
+        width: 100%;
+        font-size: 17px;
+        font-weight: 500;
+        cursor: pointer;
+        position: relative;
+        color: #ffffff;
+        background-color: #910000;
+        border-radius: 25px;
+        padding: 15px 29px;
+        text-align: center;
+    }
+
+    .calender {
+        flex-wrap: wrap;
+        justify-content: start;
+        gap: 15px;
+    }
+
+    .calender .cal-box {
+        width: 90px;
+        height: 85px;
+        padding: 0;
+    }
+
+    .calender .cal-box p {
+        font-size: 13px;
+    }
+
+    .calender .cal-box h3 {
+        font-size: 17px;
+    }
+
+    .calender .cal-box.box-1 {
+        width: 0;
+        height: 0;
+        padding: 19px 49px;
+    }
+
+    .movie-box .items {
+        width: 48%;
+    }
+
+    .more-box {
+        height: auto;
+        flex-direction: column;
+    }
+
+    .more .more-box {
+        width: 100%;
+        height: 250px;
+        border-radius: 19px;
+        overflow: hidden;
+        position: relative;
+        margin-block: 35px;
+    }
+
+    .more-txt {
+        gap: 5px;
+        padding: 25px;
+    }
+
+    .more-txt h1 {
+        font-size: 20px;
+    }
+
+    .more-txt p {
+        font-size: 13px;
+    }
+
+    .more-txt button {
+        width: 60%;
+        border-radius: 25px;
+        font-weight: 500;
+        border: none;
+        padding: 9px 12px;
+        color: rgb(160, 5, 10);
+        font-size: 13px;
+        background-color: white;
+    }
+
+
+    main {
+        height: 270vh;
+    }
+
+    .right ul {
+        flex-wrap: wrap;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+
+    .nav-header {
+        display: none;
+    }
+
+    .menu-bar .left-menu {
+        display: none;
+    }
+
+    .nav-phone {
+        width: 100%;
+        margin: auto;
+        padding-block: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 17px;
+        color: white;
+    }
+
+    .nav-phone .left-bar {
+        display: flex;
+        gap: 9px;
+        list-style: none;
+        align-items: center;
+        justify-content: start;
+        padding: 0;
+        margin: 0;
+    }
+
+    .nav-phone .left-bar li {
+        border-radius: 50%;
+        width: 35px;
+        height: 35px;
+        outline: 1px solid #666666;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .nav-phone .left-bar li:hover {
+        outline: 1px solid #bebebe;
+    }
+
+    .nav-phone .center-bar img {
+        height: 35px;
+        display: block;
+    }
+
+    .nav-phone .right-bar {
+        display: flex;
+        gap: 7px;
+        list-style: none;
+        align-items: center;
+        justify-content: end;
+        padding: 0;
+        margin: 0;
+    }
+
+    .nav-phone .right-bar li {
+        cursor: pointer;
+        font-size: 20px;
+        color: #b6b6b6;
+    }
+
+    .cinema-locate {
+        width: 100%;
+        justify-content: end;
+    }
+
+    .cinema-locate .sub-menu li {
+        width: 337px;
+    }
+
+    .slide-container,
+    .main-contents,
+    .foots {
+        width: 90%;
+    }
+
+    .slideshow-container {
+        display: none;
+    }
+
+    .slide-container {
+        border-radius: 0;
+        width: 100%;
+        position: absolute;
+        bottom: 76%;
+        left: 50;
+        overflow: hidden;
+    }
+
+    .carousel_item {
+        min-width: 100%;
+        height: 230px;
+    }
+
+    .main-contents {
+        padding: 0;
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+
+    .main-contents .tap-title {
+        display: flex;
+        justify-content: center;
+    }
+
+    .tap-title .tap-link {
+        width: 100%;
+        font-size: 17px;
+        font-weight: 500;
+        cursor: pointer;
+        position: relative;
+        color: #ffffff;
+        background-color: #910000;
+        border-radius: 25px;
+        padding: 15px 29px;
+        text-align: center;
+    }
+
+    .calender {
+        flex-wrap: wrap;
+        justify-content: start;
+        gap: 15px;
+    }
+
+    .calender .cal-box {
+        width: 90px;
+        height: 85px;
+        padding: 0;
+    }
+
+    .calender .cal-box p {
+        font-size: 13px;
+    }
+
+    .calender .cal-box h3 {
+        font-size: 17px;
+    }
+
+    .calender .cal-box.box-1 {
+        width: 0;
+        height: 0;
+        padding: 19px 49px;
+    }
+
+    .movie-box .items {
+        width: 48%;
+    }
+
+    .more-box {
+        height: auto;
+        flex-direction: column;
+    }
+
+    .more .more-box {
+        width: 100%;
+        height: 250px;
+        border-radius: 19px;
+        overflow: hidden;
+        position: relative;
+        margin-block: 35px;
+    }
+
+    .more-txt {
+        gap: 5px;
+        padding: 25px;
+    }
+
+    .more-txt h1 {
+        font-size: 20px;
+    }
+
+    .more-txt p {
+        font-size: 13px;
+    }
+
+    .more-txt button {
+        width: 50%;
+        border-radius: 25px;
+        font-weight: 500;
+        border: none;
+        padding: 5px 12px;
+        color: rgb(160, 5, 10);
+        font-size: 10px;
+        background-color: white;
+    }
+
+
+    main {
+        height: 290vh;
+    }
+
+    .right ul {
+        flex-wrap: wrap;
+    }
+
+    .pay-app {
+        gap: 15px;
+    }
+}
